@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+""" command interpreter """
 
 import cmd
 
 
 class HBNBCommand(cmd.Cmd):
+    """ class """
     prompt = "(hbnb) "
 
     def do_quit(self, line):
