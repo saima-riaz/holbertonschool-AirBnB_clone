@@ -52,6 +52,17 @@ class TestBaseModel(unittest.TestCase):
         self.assertTrue(base_model.__class__.__name__ in obj_str)
         self.assertTrue(base_model.id in obj_str)
 
+    def test_init_with_kwargs(self):
+        kwargs = {
+            'created_at': '2023-10-31T12:00:00.000000',
+            'updated_at': '2023-10-31T12:00:00.000000',
+            'custom_attribute': '89'
+        }
+        base_model = BaseModel(**kwargs)
+        self.assertEqual(base_model.created_at, datetime(2023, 10, 31, 12, 0))
+        self.assertEqual(base_model.updated_at, datetime(2023, 10, 31, 12, 0))
+        self.assertEqual(base_model.custom_attribute, '89')
+
 
 if __name__ == '__main__':
     unittest.main()

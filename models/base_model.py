@@ -11,10 +11,21 @@ from datetime import datetime
 class BaseModel:
     """ base class for managing common attributes and methods
         for derived classes """
-    def __init__(self):
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+    def __init__(self, *args, **kwargs):
+        """ create an instance with dictionary representation without class """
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != '__class__':
+                    if key in ['created_at', 'updated_at']:
+                        frmt_time = "%Y-%m-%dT%H:%M:%S.%f"
+                        setattr(self, key, datetime.strptime(value, frmt_time))
+                    else:
+                        setattr(self, key, value)
+            self.id = str(uuid.uuid4())
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """ Return a string representation of the object """
