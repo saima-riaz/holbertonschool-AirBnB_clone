@@ -3,7 +3,7 @@
 a class BaseModel that defines all common
 attributes/methods for other classes
 """
-
+import models
 import uuid
 from datetime import datetime
 
@@ -23,6 +23,8 @@ class BaseModel:
                     setattr(self, key, datetime.strptime(value, frmt_time))
                 elif key != "__class__":
                     setattr(self, key, value)
+        else:
+            models.storage.new(self)
 
     def __str__(self):
         """ Return a string representation of the object """
@@ -34,6 +36,7 @@ class BaseModel:
         Update the 'updated_at' timestamp to the current date and time.
         """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """ Return a dictionary representation of the object """
