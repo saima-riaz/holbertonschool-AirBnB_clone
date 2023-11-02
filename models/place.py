@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """import for place.py"""
 from models.base_model import BaseModel
-"""class"""
 
 
 class Place(BaseModel):
+    """ class Place for know all the infos """
     city_id = ""
     user_id = ""
     name = ""
