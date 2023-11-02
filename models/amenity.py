@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""import for amenity class"""
+""" define class Amenity """
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
     """ class amenity """
-    name = ""
+    name = ''
