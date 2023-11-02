@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Creation to define attrs methods of the console """
+
+
 import json
 import os
 from models.base_model import BaseModel
@@ -9,6 +11,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from datetime import datetime
+
 
 classes = {"BaseModel": BaseModel, "User": User, "Place": Place,
            "State": State, "City": City, "Amenity": Amenity, "Review": Review}
