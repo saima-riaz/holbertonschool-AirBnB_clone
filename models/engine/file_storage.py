@@ -4,6 +4,8 @@ import json
 from os import path
 from models.base_model import BaseModel
 
+classes = {"BaseModel": BaseModel}
+
 
 class FileStorage:
     """ defines attrs / methods """
@@ -29,5 +31,11 @@ class FileStorage:
         """ deserializes JSON file  to  __objects """
         if path.exists(self.__file_path):
             with open(self.__file_path, 'r') as file:
-                for value in json.loads(file.read()).values():
-                    eval(value["__class__"])(**value)
+                json_data = file.read()
+                obj_dict = json.loads(json_data)
+
+            for key, value in obj_dict.items():
+                class_name = value["__class__"]
+                cls = classes[class_name]
+                obj = cls(**value)
+                self.__objects[key] = obj
