@@ -46,11 +46,5 @@ class FileStorage:
             for key, value in obj_dict.items():
                 class_name = value["__class__"]
                 cls = classes[class_name]
-                if "created_at" in value:
-                    value["created_at"] = datetime.strptime(
-                        value["created_at"], frmt_time)
-                if "updated_at" in value:
-                    value["updated_at"] = datetime.strptime(
-                        value["updated_at"], frmt_time)
                 obj = cls(**value)
                 self.__objects[key] = obj
