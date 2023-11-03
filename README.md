@@ -38,7 +38,7 @@ The command interpreter is similar to a command-line shell but is specific to th
 - Update attributes of an object.
 - Delete an object.
 
-Flowchart
+<div style="text-align:center"><img src="https://github.com/davisjoseph6/holbertonschool-simple_shell-collaborative/assets/38712815/66466a31-3456-4633-90f7-98edd28281ef" /></div>
 
 ## Learning Objectives
 
@@ -75,23 +75,28 @@ By the end of this project, you should be able to explain the following concepts
 - Use the unittest module for testing.
 - Ensure test files and folders start with test_._
 - Organize test files in the same structure as the project.
-Run tests using python3 -m unittest discover tests.
-GitHub
-Maintain one project repository per group.
-Avoid cloning, forking, or using a repository with the same name before the second deadline to avoid a 0% score.
-Execution
+- Run tests using python3 -m unittest discover tests.
+
+### GitHub
+
+- Maintain one project repository per group.
+- Avoid cloning, forking, or using a repository with the same name before the second deadline to avoid a 0% score.
+
+## Execution
+
 The command interpreter should work in interactive mode and non-interactive mode. Interactive mode should resemble the following:
 
-IMAGE
+<div style="text-align:center"><img src="https://github.com/davisjoseph6/holbertonschool-simple_shell-collaborative/assets/38712815/319724f8-543d-4c89-9453-6f63e501edbe" /></div>
 
 Non-interactive mode allows you to execute commands directly from the command line, like this:
 
-IMAGE
+<div style="text-align:center"><img src="https://github.com/davisjoseph6/holbertonschool-simple_shell-collaborative/assets/38712815/8a6151d4-f0d3-4885-9676-3dff2e373f37" /></div>
 
 All tests should also pass in non-interactive mode using the command echo "python3 -m unittest discover tests" | bash.
 
-Authors
-Coconuts-del 6712@holbertonstudents.com GitHub
-Davis Joseph davisjoseph767@gmail.com GitHub
-saima-riaz saimariaz1422@gmail.com GitHub
-Note: This README provides an overview of the AirBnB clone project and its requirements. Detailed information about specific functionalities, classes, and methods will be available in the project's documentation and codebase.
+## Authors
+- Coconuts-del 6712@holbertonstudents.com [GitHub](https://github.com/Coconuts-del)
+- Davis Joseph davisjoseph767@gmail.com [GitHub](https://github.com/davisjoseph6)
+- saima-riaz saimariaz1422@gmail.com [GitHub](https://github.com/saima-riaz)
+
+**Note:** This README provides an overview of the AirBnB clone project and its requirements. Detailed information about specific functionalities, classes, and methods will be available in the project's documentation and codebase.
