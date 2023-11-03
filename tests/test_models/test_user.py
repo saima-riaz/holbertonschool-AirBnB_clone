@@ -7,7 +7,7 @@ from models.user import User
 
 class TestUser(unittest.TestCase):
     """Tests instances and methods from user class"""
-    
+
     def test_initialization(self):
         user = User()
         self.assertTrue(isinstance(user, User))
