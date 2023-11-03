@@ -88,15 +88,15 @@ The command interpreter should work in interactive mode and non-interactive mode
 
 <div style="text-align:center"><img src="https://github.com/davisjoseph6/holbertonschool-simple_shell-collaborative/assets/38712815/319724f8-543d-4c89-9453-6f63e501edbe" /></div>
 
-Non-interactive mode allows you to execute commands directly from the command line, like this:
+**Non-interactive mode allows you to execute commands directly from the command line, like this:**
 
 <div style="text-align:center"><img src="https://github.com/davisjoseph6/holbertonschool-simple_shell-collaborative/assets/38712815/8a6151d4-f0d3-4885-9676-3dff2e373f37" /></div>
 
 All tests should also pass in non-interactive mode using the command echo "python3 -m unittest discover tests" | bash.
 
 ## Authors
-- Coconuts-del 6712@holbertonstudents.com [GitHub](https://github.com/Coconuts-del)
-- Davis Joseph davisjoseph767@gmail.com [GitHub](https://github.com/davisjoseph6)
-- saima-riaz saimariaz1422@gmail.com [GitHub](https://github.com/saima-riaz)
+- Claudine Sillam 6712@holbertonstudents.com ---> [GitHub](https://github.com/Coconuts-del)
+- Davis Joseph davisjoseph767@gmail.com ---> [GitHub](https://github.com/davisjoseph6)
+- Saima Riaz saimariaz1422@gmail.com ---> [GitHub](https://github.com/saima-riaz)
 
 **Note:** This README provides an overview of the AirBnB clone project and its requirements. Detailed information about specific functionalities, classes, and methods will be available in the project's documentation and codebase.
