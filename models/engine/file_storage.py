@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Creation to define attrs methods of the console """
+""" Creation to define attrs methods of the console !"""
 
 import json
 from os import path
