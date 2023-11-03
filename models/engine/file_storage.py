@@ -1,26 +1,19 @@
 #!/usr/bin/python3
 """ Creation to define attrs methods of the console """
 
-
 import json
 from os import path
 from models.base_model import BaseModel
-"""from models.state import State
+from models.state import State
 from models.city import City
 from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from datetime import datetime
-<<<<<<< HEAD
-=======
+from models.user import User
 
-
->>>>>>> 890f20962b19547c2feaf14484a0b669b813a47e
 classes = {"BaseModel": BaseModel, "User": User, "Place": Place,
-           "State": State, "City": City, "Amenity": Amenity, "Review": Review}"""
-
-
-classes = {"BaseModel": BaseModel}
+           "State": State, "City": City, "Amenity": Amenity, "Review": Review}
 
 
 class FileStorage:
