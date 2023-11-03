@@ -54,8 +54,21 @@ class HBNBCommand(cmd.Cmd):
         if argx[0] not in self.list_class:
             print("** class doesn't exist **")
             return
+        if argx[0] == "User":
+            obj = User()
+        elif argx[0] == "BaseModel":
+            obj = BaseModel()
+        elif argx[0] == "Place":
+            obj = Place()
+        elif argx[0] == "State":
+            obj = State()
+        elif argx[0] == "City":
+            obj = City()
+        elif argx[0] == "Amenity":
+            obj = Amenity()
+        elif argx[0] == "Review":
+            obj = Review()
 
-        obj = BaseModel()
         storage.new(obj)
         storage.save()
         print(obj.id)
@@ -72,15 +85,17 @@ class HBNBCommand(cmd.Cmd):
         if argx[0] not in self.list_class:
             print("** class doesn't exist **")
             return
-        if len(argx) > 1:
-            obj_dict = storage.all()
-            key = "{}.{}".format(argx[0], argx[1])
-            if key in obj_dict:
-                print(obj_dict[key])
-            else:
-                print("** no instance found **")
-        else:
+        if len(argx) < 2:
             print("** instance id missing **")
+            return
+
+        obj_dict = storage.all()
+        key = "{}.{}".format(argx[0], argx[1])
+
+        if key in obj_dict:
+            print(obj_dict[key])
+        else:
+            print("** no instance found **")
 
     def do_destroy(self, arg):
         """
@@ -92,6 +107,9 @@ class HBNBCommand(cmd.Cmd):
             return
         if argx[0] not in self.list_class:
             print("** class doesn't exist **")
+            return
+        if len(argx) < 2:
+            print("** instance id missing **")
             return
         obj_dict = storage.all()
         key = "{}.{}".format(argx[0], argx[1])
@@ -131,13 +149,14 @@ class HBNBCommand(cmd.Cmd):
         if not argx:
             print("** class name missing **")
             return
-        obj_id = argx[1]
+
         if class_name not in self.list_class:
             print("** class doesn't exist **")
             return
         if len(argx) < 2:
             print("** instance id missing **")
             return
+        obj_id = argx[1]
         obj_key = "{}.{}".format(class_name, obj_id)
         if obj_key not in obj_dict:
             print("** no instance found **")
