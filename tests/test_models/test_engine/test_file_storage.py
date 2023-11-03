@@ -6,6 +6,7 @@ import os
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 
+
 class TestFileStorage(unittest.TestCase):
     def setUp(self):
         self.file_path = "file.json"
@@ -35,7 +36,7 @@ class TestFileStorage(unittest.TestCase):
         self.storage.new(self.base_model)
         self.storage.save()
         self.assertTrue(os.path.exists(self.file_path))
-        
+
         new_storage = FileStorage()
         new_storage.reload()
         # Check if the reloaded object is the same as the original object
@@ -43,6 +44,6 @@ class TestFileStorage(unittest.TestCase):
         reloaded_model = new_storage.all()[key]
         self.assertEqual(reloaded_model.to_dict(), self.base_model.to_dict())
 
+
 if __name__ == '__main__':
     unittest.main()
-
